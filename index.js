@@ -29,7 +29,7 @@ myFunction();
 For example, `summation(4)` should return 10 because 1+2+3+4 is 10. Note, you may use a for loop for this function if you wish */
 
 function summation(num) {
-  return (num*(num+1))/2;
+  return (num * (num + 1)) / 2;
 }
  console.log('task 2', summation(4));
 
@@ -55,10 +55,14 @@ const zooAnimals = [
   displayNames will be an array of strings, and each string should follow this pattern: "name: {name}, scientific: {scientific name}"
   */
 
-  function animalNames(/*Your Code Here*/){
-    /*Your Code Here*/
+  function animalNames(array){
+    const displayNames = [];
+    array.forEach(function(item){
+      return displayNames.push(`name: ${item.animal_name.toString()}, scientific: ${item.scientific_name.toString()}`);
+    });
+    return displayNames;
   }
-  
+  console.log('topic 2.1', animalNames(zooAnimals));
 
   /* 🦁🦁🦁 Request 2: .map() 🦁🦁🦁
   The zoo needs a list of all their animal's names converted to lower case. 
