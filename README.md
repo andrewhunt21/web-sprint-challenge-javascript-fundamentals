@@ -26,13 +26,28 @@ Edit this document to include your answers after each question. Make sure to lea
 
 1. Explain the differences between `.map`, `.reduce` and `.filter` and describe a use case for each. 
 
+    .map is used to convert data and it returns a brand new array without manipulating the original array
+    .reduce only returns a single value, not an array. It's usually used for multiplication and addition
+    .filter is used to filter data based on true or false. true gets included in the new array and false is left out. it returns a new array without manipulating the original
+
 2. Explain the difference between a callback and a higher order function.
+
+    a callback is a funciton that is passed into another function as an argument. a higher order function is a function that receives other functions.
 
 3. Explain what a closure is.
 
+    when an inner funciton reaches out of scope to grab a variable defined in an outer function
+
 4. Describe the four principles of the 'this' keyword.
 
+    window binding - when 'this' has no context it returns the window either global object in node or undefined in strict mode. almost never use.
+    implicit binding - applies to objects with methods. this refers to what's left of the dot when function method is invoked.
+    explicit binding - this keyword uses .call, .apply, or .bind. call invokes the function and you pass arguments one by one. apply invokes the function and pass the argument as an array. bind passes agruments one by one but will not immediatly invoke function, instead returns a new funciton that can be invoked later.
+    new binding - function is invoked with new keyword the this keyword inside that function is bound to the new object being constructed. when fucntion is invoked as constructor using the new keyword 'this' pionts to the new object created.
+
 5. Why do we need super() in an extended class?
+
+    super tells the child object attributes get assinged to child. it replaces object.create and parent.call
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade. 
 
